@@ -28,6 +28,25 @@ for (const folder of commandFolders) {
     }
 }
 
+const privatefoldersPath = path.join(__dirname, 'private_commands');  // get the commands folder path
+const privatecommandFolders = fs.readdirSync(privatefoldersPath);  // get array of folders at path
+
+for (const folder of privatecommandFolders) {
+    const privatecommandsPath = path.join(privatefoldersPath, folder);
+    const privatecommandFiles = fs.readdirSync(privatecommandsPath).filter(file => file.endsWith('.js'));
+    for (const file of privatecommandFiles) {
+        const privatefilePath = path.join(privatecommandsPath, file);
+        const command = require(privatefilePath);
+        // Set a new item in the Collection with the key as the command name and the value as the exported module
+        if ('data' in command && 'execute' in command) {
+            client.commands.set(command.data.name, command);
+        }
+        else {
+            console.log(`[WARNING] The command at ${privatefilePath} is missing a required "data" or "execute" property.`);
+        }
+    }
+}
+
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
