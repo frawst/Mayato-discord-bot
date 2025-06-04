@@ -1,6 +1,7 @@
 # Root files
 config.json
 .env
+package*.json
 
 # Folders
 /node_modules
