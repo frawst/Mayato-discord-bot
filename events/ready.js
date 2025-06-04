@@ -1,5 +1,5 @@
 const { ActivityType, PresenceUpdateStatus, Events } = require('discord.js');
-const { BOT_NAME, BOT_PROFILE_PICTURE_PATH, BOT_ACTIVITY_NAME, BOT_STREAM_LINK } = require('config.json');
+const { BOT_NAME, BOT_ACTIVITY_NAME, BOT_STREAM_LINK } = require('../config.json');
 
 module.exports = {
     name: Events.ClientReady,
@@ -15,9 +15,7 @@ module.exports = {
                     }],
                 status: PresenceUpdateStatus.Idle
             });
-        //client.user.setUsername(BOT_NAME);
-        //client.user.setAvatar(BOT_PROFILE_PICTURE_PATH);
-        //client.user.setBanner("rin-bot-profile.png"); // Doesnt work, as expected
+        client.user.setUsername(BOT_NAME);
         console.log(`Ready! Logged in as ${client.user.tag}`);
     },
 };
