@@ -1,0 +1,11 @@
+{
+    "APP_ID": "YOUR APP ID HERE",
+    "DISCORD_TOKEN": "YOUR APP USER TOKEN HERE",
+    "PUBLIC_KEY": "YOUR APP PUBLIC KEY HERE",
+    "GUILD_ID": "A SERVER ID",
+
+    "BOT_NAME": "Mayato Bot",
+    "BOT_PROFILE_PICTURE_PATH": "res/profile-picture.png",
+    "BOT_ACTIVITY_NAME": "I Am A Bot",
+    "BOT_STREAM_LINK": "https://github.com/frawst/Mayato-discord-bot/"
+}

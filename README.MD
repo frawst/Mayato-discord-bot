@@ -13,3 +13,7 @@ Deploys commands, unintuitively.
 Deletes all commands known to the bot, semi-intuitively.
 
 Has a collection of functional commands with no practical daily use.
+
+# Notes
+
+This repo includes "public_config.json" containing required(?) global variables. This must be renamed to "config.json" and populated with your own data before running.
