@@ -20,7 +20,7 @@ module.exports = {
         // interaction.guild is the object representing the Guild in which the command was run
         const channel = await interaction.client.channels.fetch(interaction.options.getString('target_id'));
         await channel.send(interaction.options.getString('message'))
-        await interaction.reply('Acknowledged.');
+        await interaction.reply({content: 'Acknowledged.', ephemeral: true});
     },
 };
 
