@@ -1,0 +1,7 @@
+# Root files
+config.json
+.env
+
+# Folders
+/node_modules
+/res
